@@ -29,23 +29,27 @@
      .border {
        border: 10px ridge pink;
      }
-     ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px;
+    navbar {
+  overflow: hidden;
   background-color: pink;
+  position: fixed; 
+  top: 0; 
+  width: 1229px;
   border:10px ridge grey;
 }
-    li a {
+
+.navbar a {
+  float: left;
   display: block;
-  color: #000;
-  padding: 8px 16px;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
 }
-li a:hover {
-  background-color: #555;
-  color: white;
+
+.navbar a:hover {
+  background: rgb(255, 255, 255);
+  color: black;
 }
      body {
      font-family:futura;
@@ -59,10 +63,10 @@ li a:hover {
   }
   </style>
    <body id="home">
-   <ul>
-    <li><a href="#home"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5koSZ1Xim246fZSzcz_Gjk5ZEp_NRWcwhmjHDdoGH8kSHdLLn" width="60px" height="60px"></a></li>
-     <li><a href="#welcome">Introduction<a></li>
-     </ul>
+   <div class="navbar">
+    <a href="#home"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5koSZ1Xim246fZSzcz_Gjk5ZEp_NRWcwhmjHDdoGH8kSHdLLn" width="60px" height="60px"></a></li>
+     <a href="#welcome">Introduction<a></li>
+     </div>
       <div class="main">
        <div class="parallax"></div>
         <h2 id="header">Welcome <span class="Pink-piano-font">To, the pink p</span>iano studio.</h2>
