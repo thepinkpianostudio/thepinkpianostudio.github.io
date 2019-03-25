@@ -63,6 +63,14 @@
   }
   </style>
    <body id="home">
+     $(window).bind('scroll', function() {
+     if ($(window).scrollTop() > 100) {
+         $('#header').hide();
+     }
+     else {
+         $('#header').show();
+     }
+});
    <div class="navbar">
     <a href="#home"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5koSZ1Xim246fZSzcz_Gjk5ZEp_NRWcwhmjHDdoGH8kSHdLLn" width="60px" height="60px"></a></li>
      <a href="#welcome">Introduction<a></li>
