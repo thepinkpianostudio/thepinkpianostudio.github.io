@@ -2,19 +2,7 @@
   <head>
     <meta charset="utf-8">
     <title>The Pink Piano Studio</title>
-    <script src="https://code.jquery/jquery-3.2.1.js"></script>
-    <script type="text/javascript">
-         var zero = 0;
-          $(document).ready(function(){
-             $(window).on('scroll', function({
-                $('.navbar').toggleClass('hide', $(window).scrollTop()
-                                  > zero);                                
-                    zero = $(window).scrollTop();   
-                                  }))                    
-                               })
-                                  </script>
-  </head>
-   <style>
+    <style>
  #header{
   color: white;
   font-family: monospace;
@@ -75,9 +63,6 @@
   border:10px ridge pink;
       box-sizing: border-box;
       transition: .5s;
-}
-  .navbar.hide {                                                                                                         .navbar {
-  transform: translateY(-100%)
 }
 
 .navbar a {
