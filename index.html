@@ -4,23 +4,25 @@
     <title>The Pink Piano Studio</title>
   </head>
     <style>
-
+      html {
+        display: auto;
+      }
  #header {
-  color: white;
+  color: #ffcccc;
   font-family: monospace;
   position: fixed;
+  overflow: cliped; 
   z-index: 600;
   top: 200px;
   left: 200px;
+  right: 50px;
 }
 .main {
        margin: 37px;
-       z-index: 800;
      }
      
      body, html {
     height: 100%;
-    z-index: 1000;
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 44px;
@@ -30,14 +32,11 @@
     overflow: hide;
     height: 100%;
     padding: 0;
-    z-index: 1200;
 }
      .Pink-piano-font {
        color: pink;
      }
-
       .parallax {
-  z-index: 100;
   background-image: url("https://i.pinimg.com/originals/6e/cc/66/6ecc666f73fe5d80f9486b6dc6e64335.jpg");
   font-family: monospace;
   min-height: 500px; 
@@ -47,7 +46,6 @@
   background-size: cover;
 }
      .parallax-2 {
-       z-index: 1400;
        background-image: url("https://i.pinimg.com/originals/58/e3/80/58e380956029908dbc94d29982c00cf1.jpg");
        font-family: monospace;
        min-height: 500px; 
@@ -58,7 +56,6 @@
      }
  
      .border {
-       z-index: 1600;
        border: 10px ridge pink;
        overflow: hidden;
      }
@@ -72,7 +69,6 @@
   box-sizing: border-box;
   transition: .5s;
 }
-
 .navbar a {
   float: left;
   display: block;
@@ -81,7 +77,6 @@
   padding: 14px 16px;
   text-decoration: none;
 }
-
 .navbar a:hover {
   background: white;
   color: black;
@@ -113,7 +108,7 @@
      <div class="scroll">
       <div class="main">
        <div class="parallax"></div>
-        <h2 id="header"><span class="wlcm-t">Welcome T</span><span class="o-th">o th</span><span style="color: white;">e</span><span class="Pink-piano-font"> pink pia</span><span style="color: white;">no </span><span class="wlcm-t">studio.</span></h2>
+        <h2 id="header">welcome to the pink piano studio.</h2>
          <div class="border" style="height:700px;background-color: white;font-size:36px">
           <center>
             </h2>
