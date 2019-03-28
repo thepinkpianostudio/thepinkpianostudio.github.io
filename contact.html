@@ -4,9 +4,6 @@
     <title>The Pink Piano Studio</title>
   </head>
     <style>
-      html {
-        display: auto;
-      }
  #header {
   font-size: 60px;
   color: #ffcccc;
@@ -59,32 +56,10 @@
        border: 10px ridge pink;
        overflow: hidden;
      }
-    .navbar {
-  overflow: hidden;
-  background-color: pink;
-  position: fixed; 
-  top: 0; 
-  width: 1234px;
-  border:10px ridge pink;
-  box-sizing: border-box;
-  transition: .5s;
-}
-.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.navbar a:hover {
-  background: white;
-  color: black;
-}
+   
      body {
      font-family:futura;
      background-color: pink;
-     padding-top: 40px;
   }
   h3 {
     font-size:50px;
@@ -98,6 +73,18 @@
       }
       .wlcm-t {
         color: grey;
+      }
+      .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
       }
      .sidenav a {
   padding: 8px 8px 8px 32px;
