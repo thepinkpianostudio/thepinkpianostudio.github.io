@@ -159,7 +159,7 @@ canvas {
     background-color: #f1f1f1;
 }
   </style>
-   <body id="home" onload="startGame()">
+   <body id="home">
      <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#home"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5koSZ1Xim246fZSzcz_Gjk5ZEp_NRWcwhmjHDdoGH8kSHdLLn" width="60px" height="60px"></a>
@@ -189,7 +189,7 @@ canvas {
           </center>
             </div>
         <div class="parallax-3"></div>
-        <div id="game" class="border" style="height:400px;background-color: white;font-size:36px">
+        <div onload="startGame()" id="game" class="border" style="height:400px;background-color: white;font-size:36px">
           <h3> little game center if bored</h3>
           <script>
 
@@ -310,6 +310,7 @@ function accelerate(n) {
     myGamePiece.gravity = n;
 }
 </script>
+          <p> reset page to play again</p>
         </div>
         <script>
 function openNav() {
