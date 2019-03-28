@@ -12,12 +12,20 @@ body {
   font-size: 30px;
   font-family: futura;
 }
-  
+  .button {
+    height:200px;
+    width:200px;
+}
+    .game-script {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+    }
 </style>
 </head>
 <body onload="startGame()">
     <center>
-<script>
+<script class="game-script">
 
 var myGamePiece;
 var myObstacles = [];
@@ -139,8 +147,7 @@ function accelerate(n) {
     </center>
 <br>
     <center>
-<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)" width="100px"
-        height="100px">HOVER</button>
+<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)" class="button">HOVER</button>
 <p>reset page to restart</p>
 <p>How long can you stay alive?</p>
     </center>
