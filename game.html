@@ -15,7 +15,7 @@ body {
   .button {
       background-color: green;
       color: red;
-    height:200px;
+    height:70px;
     width:200px;
 }
     .button:hover {
@@ -40,7 +40,7 @@ var myScore;
 
 function startGame() {
     myGamePiece = new component(30, 30, "red", 10, 120);
-    myGamePiece.gravity = 0.05;
+    myGamePiece.gravity = 0.03;
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
 }
@@ -48,7 +48,7 @@ function startGame() {
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 1024;
+        this.canvas.width = 1229;
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
