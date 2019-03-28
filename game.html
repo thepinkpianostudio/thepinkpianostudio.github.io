@@ -12,6 +12,9 @@ body {
   font-size: 30px;
   font-family: futura;
 }
+    script {
+        position: center;
+    }
 </style>
 </head>
 <body onload="startGame()">
@@ -135,8 +138,11 @@ function accelerate(n) {
 }
 </script>
 <br>
-<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+    <center>
+<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)" width="50px"
+        height="50px">HOVER</button>
 <p>reset page to restart</p>
 <p>How long can you stay alive?</p>
+    </center>
 </body>
 </html>
