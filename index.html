@@ -85,7 +85,7 @@
      body {
      top : 200px;
      font-family:futura;
-     background-image: linear-gradient(to bottom right, pink, purple,);
+     background-color: pink;
   }
   h3 {
     font-size:50px;
@@ -156,7 +156,7 @@
   <a href="contact.html">Details</a>
   <a href="#">Contact</a>
 </div>
-<span onclick="openNav()" style="font-size:40px;"><img width="30px" height="30px" src="https://image.flaticon.com/icons/svg/56/56763.svg"></span>
+<span onclick="openNav()" style="font-size:40px;padding-top: 25px;"><img width="30px" height="30px" src="https://image.flaticon.com/icons/svg/56/56763.svg"></span>
      <div class="scroll">
       <div class="main">
         <div id="main">
@@ -176,6 +176,97 @@
           <h3 id="Experience">My Piano Experience</h3>
           <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore<br> magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br> consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla<br> pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>"<p>
           </center>
+          <script>
+            var Button = function(config){
+    this.x = config.x || 0;
+    this.y = config.y || 0;
+    this.width = config.width || 150;
+    this.height = config.heigth || 50;
+    this.label = config.label || "Click";
+};
+Button.prototype.draw = function() {
+    fill(0, 233, 0);
+    rect(this.x,this.y,this.width,this.height,25);
+    fill(0, 0, 0);
+    textSize(20);
+    textAlign(CENTER,TOP);
+    text(this.label,this.x+75,this.y+this.height/4);
+};
+Button.prototype.isMouseInside = function(){
+    return mouseX > this.x && mouseX < (this.x+this.width) && mouseY > this.y && mouseY < (this.y +this.height) ;
+
+};
+
+var btn1 = new Button({x:20,y:333,label:"Left"});
+var btn2 = new Button({x:230,y:333,label:"Right"});
+var btn3 = new Button({x:125,y:277,label:"Restart"});
+/*
+ This program simulates a ball bouncing,
+ by repeatedly drawing the ball at the calculated
+ new position, according to the arc of a parabola.
+*/
+noStroke();
+
+// czas - wartoć na początku wynosi 0
+var t = 0;
+
+// Położenie piłki (wysokosc nad ziemią), 0 oznacza że piłka znajduje się na ziemi
+var y = 0;
+var x=200;
+var przesuniecie =0;
+var draw = function() {
+    if (x<0){x=1;przesuniecie*=-1;}else if(x>400){x=399;przesuniecie*=-1;}
+    x=x+przesuniecie;
+    // ustawienie tła w kolorze nieba - czyszczenie sladu piłki
+    background(214, 254, 255);
+    
+    // Rysowanie ziemi
+    fill(255, 255, 255);
+    rect(0, 250, 400, 150);
+  
+    // Calculate y according to the path of a parabola with respect to "t":
+    // y = (velocity)*t - (acceleration)*t^2;
+    // We can tweak the velocity and acceleration constants for our fake world
+    y = -0.01*t*t + 3.0*t; 
+    
+    // We make the shadow lighter as we increase y
+    var grey = 0.1 * y + 200;
+    // We grow the shadow bigger as we increase y
+    var shadowSize = 0.2 * y + 50;
+    // Rysowanie cienia
+    fill(grey, grey, grey);
+    ellipse(x, 300, shadowSize, 10);
+    
+    // Since y is a positive height, we need to flip it
+    // to look right on the inverted coordinate plane
+    var correctedY = 250 - y;
+
+    // rysowanie piłki
+    fill(71, 117, 255);
+    ellipse(x, correctedY, 50, 50);//mozesz zamiast 200 wstawić np mouseX - co zrobić żeby cień wtedy też się przemieszczał?
+
+    // If y becomes negative, the ball has hit the ground
+    if (y < 0) {
+        // Now we reset t to make it "bounce" up again
+        t = 0;//sprawdź co się stanie gdy wykomentujesz tą linię 
+    }
+    
+    t += 5;//ustaw 1 dla slow mo :)
+
+   
+      btn1.draw();
+      btn2.draw();
+      btn3.draw();
+};
+mouseClicked = function()
+{
+    if (btn1.isMouseInside()){przesuniecie--;
+    
+    }
+    else if (btn2.isMouseInside()){przesuniecie++; }
+    else if (btn3.isMouseInside()){t=0;}
+};
+          </script>
             </div>
         <script>
 function openNav() {
