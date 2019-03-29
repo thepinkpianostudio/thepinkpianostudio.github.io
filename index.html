@@ -12,22 +12,23 @@
   font-size: 60px;
   color: #ffcccc;
   font-family: monospace;
-  position: absolute;
+  position: fixed;
   overflow: cliped; 
   z-index: 600;
   top: 200px;
   left: 250px;
   right: 50px;
 }
-.main {
+/*.main {
        margin: 37px;
-     }
+     }*/
      
      body, html {
+    z-index: 100;
     height: 100%;
     padding-left: 0px;
     padding-right: 0px;
-    padding-bottom: 25px;
+    /*padding-bottom: 25px;*/
 }
 .scroll {
     overflow: hide;
@@ -156,7 +157,7 @@
   <a href="contact.html">Details</a>
   <a href="game.html">Game Room For Kids</a>
 </div>
-<span onclick="openNav()" style="z-index: 1000px;position: fixed;height: 40px;font-size:40px;padding-top: 25px; border: 10px groove grey; background-color: white;"><img width="30px" height="30px" src="https://image.flaticon.com/icons/svg/56/56763.svg">Navigate around the website.</span>
+<span onclick="openNav()" style="z-index: 1000px;position: fixed;height: 80px;font-size:40px;padding-top: 25px; border: 10px groove grey; background-color: white;"><img width="30px" height="30px" src="https://image.flaticon.com/icons/svg/56/56763.svg">Navigate around the website.</span>
      <div class="scroll">
       <div class="main">
         <div id="main">
